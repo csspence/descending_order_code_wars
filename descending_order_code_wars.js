@@ -10,6 +10,16 @@ Input: 145263 Output: 654321
 Input: 123456789 Output: 987654321
 */
 
-function descendingOrder(n){
-  //...
+const descendingOrder = (n) => {
+  let str = n.toString();
+  let array = str.split('');
+  let sorted = array.sort(function(a, b) {
+    return b - a;
+  })
+  let numStr = '';
+  for(let i = 0; i < sorted.length; i++) {
+    numStr += sorted[i];
+  }
+
+  return parseInt(numStr);
 }
